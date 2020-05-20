@@ -44,7 +44,7 @@ export default class Login extends React.Component {
 			<Text style={estetica.buttontextstyles} >ACCEDI</Text>
 			</TouchableOpacity>
 
-			<TouchableOpacity style={estetica.registrazione} onPress={() => alert(this.state.email)}>
+			<TouchableOpacity style={estetica.registrazione} onPress={() => this.props.navigation.navigate("Signup")}>
 			<Text style={[estetica.buttontextstyles, {color: 'black' }]} >REGISTRATI</Text>
 			</TouchableOpacity>
 
@@ -92,12 +92,12 @@ const estetica = StyleSheet.create({
 		alignItems: "center",
 		padding: 10,
 		marginTop: 15,
-		borderRadius: 28,
+		borderRadius: 28
 	},
 	
 	buttontextstyles:{
 		color: "white",
-		fontWeight: "bold",
+		fontWeight: "bold"
 	},
 	registrazione:{
 		backgroundColor: "transparent",
